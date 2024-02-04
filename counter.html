@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right,red,blue);
+        color: transparent;
+        background-clip: text;
+      }
+      .center {
+        max-width: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      button {
+        padding: 12px 40px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #222;
+        scale: 0.9;
+      }
+      #counter {
+        font-size: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Click this button</h1>
+      <h2 id="counter">0</h2>
+      <button id="button">click Me</button>
+    </div>
+    <script>
+      let counter = document.getElementById("counter");
+      let button = document.getElementById("button");
+      button.addEventListener("click", function count() {
+        let num = parseInt(counter.innerText);
+        counter.innerText = num + 1;
+      });
+    </script>
+  </body>
+</html>
